@@ -10,7 +10,7 @@ class Solution:
         
         while fast_ptr and fast_ptr.next :
             slow_ptr = slow_ptr.next
-            fast_ptr = fast_ptr.next.next
+            fast_ptr = fast_ptr.next.next # double 
         return(slow_ptr)
     
     
