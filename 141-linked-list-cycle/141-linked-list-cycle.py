@@ -7,19 +7,17 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         
-        if(not head or not head.next):
+        if (not head or not head.next):
             return False
-			
-		#Initializing slow and fast pointers
-        slow = head
-        fast = head 
-		
-		#Moving slow ptr at one step a time and fast ptr at two step at a time
-        while(fast.next and fast.next.next):
-            slow = slow.next
-            fast = fast.next.next
-			
-			#If they meet then cycle is present for sure
-            if(slow == fast):
+        
+        slow_ptr = head
+        fast_ptr = head
+
+        while (fast_ptr.next and fast_ptr.next.next):
+            
+            slow_ptr = slow_ptr.next
+            fast_ptr = fast_ptr.next.next
+            
+            if (slow_ptr == fast_ptr):
                 return True
         return False
