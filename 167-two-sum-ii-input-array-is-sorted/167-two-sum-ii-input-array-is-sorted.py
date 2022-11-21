@@ -15,9 +15,6 @@ class Solution:
             while l!=r:
                 print(r,l)
                 curr_sum = numbers[l]+numbers[r]
-                if curr_sum > target:
-                    r -= 1
-                elif curr_sum < target:
-                    l += 1
-                else:
-                    return([l+1,r+1])
+                if curr_sum > target : r -= 1
+                elif curr_sum < target : l += 1
+                else: return([l+1,r+1])
